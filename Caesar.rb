@@ -17,12 +17,11 @@ letters.each do |x|
 	if x.ord == 32  
 		(print x)
 	else
-		if x.ord + key >122
+		if ((x.ord + key > 122) && (x.ord + key < (122+26))) || ((x.ord + key > 90) && (x.ord + key < (90+26)))
 			tkey -= 26
 		end
 
 		(print (x.ord + tkey).chr)
-		print "(#{x.ord}) "
 	end
 end
 
